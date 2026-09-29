@@ -28,7 +28,7 @@ export function Services({ services, booking }) {
         ${sectionLabel(services.label)}
         <h2 id="services-heading" class="mt-6 font-heading text-4xl font-light text-ink md:text-5xl lg:text-6xl">${esc(services.heading)}</h2>
         <p class="mt-6 max-w-md text-base leading-relaxed text-muted">${esc(services.intro)}</p>
-        <a href="${esc(booking.url)}" ${external} class="mt-10 hidden lg:inline-flex ${buttonClasses.outline}">${esc(services.ctaLabel)} ${icon('arrowUpRight', 'h-4 w-4')}</a>
+        <div class="mt-10 hidden lg:block"><a href="${esc(booking.url)}" ${external} class="${buttonClasses.outline}">${esc(services.ctaLabel)} ${icon('arrowUpRight', 'h-4 w-4')}</a></div>
       </div>
     </div>
     <div class="lg:col-span-7 lg:col-start-6">
@@ -37,7 +37,7 @@ export function Services({ services, booking }) {
       </div>
       <ul class="border-t border-ink md:border-t-0">${rows}</ul>
       ${services.note ? `<p class="mt-8 text-sm italic leading-relaxed text-muted">${esc(services.note)}</p>` : ''}
-      <a href="${esc(booking.url)}" ${external} class="mt-10 lg:hidden ${buttonClasses.outline}">${esc(services.ctaLabel)} ${icon('arrowUpRight', 'h-4 w-4')}</a>
+      <a href="${esc(booking.url)}" ${external} class="mt-10 ${buttonClasses.outline} lg:hidden">${esc(services.ctaLabel)} ${icon('arrowUpRight', 'h-4 w-4')}</a>
     </div>
   </div>
 </section>`;
