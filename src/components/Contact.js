@@ -69,6 +69,7 @@ export function Contact({ contact, booking }) {
         </div>
         <p class="hidden text-base text-ink" role="status" data-form-success>${esc(form.successMessage)}</p>
         <p class="hidden text-base text-accent" role="alert" data-form-error>${esc(form.errorMessage)}</p>
+        <p class="text-sm text-muted">${esc(form.privacyNote)} <a href="/privacy/" class="underline underline-offset-4">${esc(form.privacyLabel)}</a></p>
       </form>
     </div>
   </div>
